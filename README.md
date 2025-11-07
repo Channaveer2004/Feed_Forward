@@ -1,6 +1,6 @@
-# POSSPOLE_ASSIGNMENT
+# Feed-Forward
 
-Live Link: [https://posspoleassignment.vercel.app/](https://posspoleassignment.vercel.app/)
+Live Link: [https://feed-forward-blush.vercel.app/](https://feed-forward-blush.vercel.app/)
 
 ## Project Overview
 This project consists of a frontend (React + Vite) and a backend (Node.js + Express) with MongoDB as the database. It includes authentication, admin dashboard, feedback management, and more.
@@ -12,7 +12,7 @@ This project consists of a frontend (React + Vite) and a backend (Node.js + Expr
 ### 1. Clone the Repository
 ```bash
 git clone <repo-url>
-cd POSSPOLE_ASSIGNMENT
+cd Feed-Forward
 ```
 
 ### 2. Setup and Run the Backend
@@ -78,7 +78,7 @@ CLIENT_URL=http://localhost:5173/
   - Production: `https://posspole-assignment.onrender.com/api`
   - Local: `http://localhost:4000/api`
 - **Client URL:**
-  - Production: `https://posspoleassignment.vercel.app/`
+  - Production: `https://feed-forward-blush.vercel.app/`
   - Local: `http://localhost:5173/`
 ---
 
