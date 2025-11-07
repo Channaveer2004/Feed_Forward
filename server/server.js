@@ -22,14 +22,32 @@ connectDB();
 
 
 app.use(helmet());
-// Normalize CLIENT_URL to remove trailing slash for CORS
-const allowedOrigin = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, "") : undefined;
-app.use(cors({
-  origin: allowedOrigin,
-  credentials: true,
-}));
+
+
+const allowedOrigins = [
+  "https://posspoleassignment.vercel.app",
+  "https://feed-forward-blush.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(cookieParser());
+
 
 
 const limiter = rateLimit({
